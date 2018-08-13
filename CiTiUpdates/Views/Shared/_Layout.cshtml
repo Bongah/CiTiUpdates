@@ -7,7 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body background="~/images/image.jpg">
+<body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -20,13 +20,26 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Admin", "Index", "Admin Login")</li>
-                        <li>@Html.ActionLink("Login", "About", "Login")</li>
-                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    </ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "About")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Contact")</li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://builtwithbootstrap.com/" target="_blank">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Admin", "About", "Home")
+                    </li>
+                </ul>
+                
             </div>
+
         </div>
+
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
